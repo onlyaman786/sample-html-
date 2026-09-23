@@ -1,0 +1,163 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aman — Coming Soon</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Inter, Arial, sans-serif;
+      color: #fff;
+      background:
+        radial-gradient(circle at 20% 20%, #5b21b6 0, transparent 35%),
+        radial-gradient(circle at 80% 80%, #2563eb 0, transparent 35%),
+        #050816;
+      overflow: hidden;
+    }
+
+    .container {
+      width: min(90%, 800px);
+      text-align: center;
+      padding: 60px 30px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 16px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      backdrop-filter: blur(10px);
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(55px, 11vw, 120px);
+      line-height: .9;
+      font-weight: 800;
+      letter-spacing: -5px;
+      margin-bottom: 25px;
+      background: linear-gradient(90deg, #fff, #93c5fd, #c4b5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .coming {
+      font-size: clamp(28px, 5vw, 55px);
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 550px;
+      margin: auto;
+      color: #aeb8d0;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .loader {
+      width: 180px;
+      height: 5px;
+      margin: 40px auto 25px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.1);
+      overflow: hidden;
+    }
+
+    .loader::before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 45%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #6366f1, #38bdf8);
+      animation: loading 1.5s infinite ease-in-out;
+    }
+
+    @keyframes loading {
+      0%   { transform: translateX(-120%); }
+      100% { transform: translateX(400%); }
+    }
+
+    .footer {
+      margin-top: 45px;
+      font-size: 13px;
+      color: #68738d;
+    }
+
+    .orb {
+      position: fixed;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: .18;
+      pointer-events: none;
+    }
+
+    .orb.one {
+      background: #7c3aed;
+      top: -150px;
+      left: -100px;
+    }
+
+    .orb.two {
+      background: #0ea5e9;
+      bottom: -150px;
+      right: -100px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="orb one"></div>
+  <div class="orb two"></div>
+
+  <main class="container">
+
+    <div class="badge">
+      Something Amazing Is Coming
+    </div>
+
+    <div class="coming">
+      Coming Soon
+    </div>
+
+    <h1>Aman</h1>
+
+    <p>
+      I'm working on something new and exciting.
+      The website is currently under development and
+      will be launching soon.
+    </p>
+
+    <div class="loader"></div>
+
+    <div class="footer">
+      © 2026 Aman. All rights reserved.
+    </div>
+
+  </main>
+
+</body>
+</html>
+```
